@@ -1,0 +1,15 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+body{
+  background-color:#dbdbdb;
+  font-family: Arial, sans-serif;
+}
+.search-bar{
+  width:30%;
+  padding:10px;
+  margin:10px;
+  border:2px solid #301a47;
+  border-radius:10px;
+}

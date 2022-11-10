@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="css/main.css" rel="stylesheet" type="text/css" />
+  <link href="css/top.css" rel="stylesheet" type="text/css" />
+  <link href="css/side.css" rel="stylesheet" type="text/css" />
+  <link href="css/mainblock.css" rel="stylesheet" type="text/css" />
+  <link href="css/editproduct.css" rel="stylesheet" type="text/css" />
+  <link href="css/creategoodsin.css" rel="stylesheet" type="text/css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lowdb/1.0.0/low.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.11.0/brython.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/popups.js"></script>
+  <script src="js/tables.js"></script>
+  <script src="js/editproduct.js"></script>
+  <script src="js/gidb.js"></script>
+  <script type = "module" src="js/db.js"></script>
+</head>
+
+<body>
+  <div id="top">
+    <h1 id="menu-title">MS System</h1>
+    <!--<h1 id="menu-btn">&#9776;</h1>-->
+  </div>
+  <div id="side-bar-dec">
+  </div>
+  <div id="side-bar">
+    <div class="menu-item" id="side-goodsin">&#8676;</div>
+    <div class="menu-item">&#8677;</div>
+    <div class="menu-item" id="side-settings">&#9630;</div>
+  </div>
+  <div class="pop-up-container" id="side-settings-popup">
+    <p class="pop-up-item" id="aprd">Add Products</p>
+    <p class="pop-up-item" id="dprd">Edit Product</p>
+    <p class="pop-up-item" id="usr">Users</p>
+    <p class="pop-up-item" id="rpr">Reports</p>
+    <p class="pop-up-item" id="loc">Locations</p>
+
+  </div>
+  <div class="pop-up-container" id="side-goodsin-popup">
+    <p class="pop-up-item" id="create-gi">Create</p>
+    <p class="pop-up-item" id="aprd">Outstanding</p>
+    
+
+  </div>
+
+  
+  <div id="main-block">
+    
+  <div id="logger"><p id="logger-text"></p></div>
+    
+    <div class="inner-main-block" id="add-product">
+      <h1>Add PRD</h1>
+      <table>
+        <tr class="add-product-tr">
+          <td class="add-product-td">Code</td>
+          <td class="add-product-td"><input id="addprd-code" type="text"></td>
+        </tr>
+        <tr class="add-product-tr">
+          <td class="add-product-td">Customer</td>
+          <td class="add-product-td"><input id="addprd-cust" type="text"></td>
+        </tr>
+        <tr class="add-product-tr">
+          <td class="add-product-td">Description</td>
+          <td class="add-product-td"><input id="addprd-desc" type="text"></td>
+        </tr>
+        <tr class="add-product-tr">
+          <td class="add-product-td">Plt type</td>
+          <td class="add-product-td"><input id="addprd-ptype" type="text"></td>
+        </tr>
+      </table>
+       <div class="main-block-control-panel">
+         <p id="confirm-add-pallet" class="main-block-control-panel-btn">Confirm</p>
+       </div>
+    </div>
+
+    <div class="inner-main-block" id="del-product">
+      <h1>EDIT PRD</h1>
+      <input class="search-bar edit-search-bar" type="text" placeholder="Search SKU">
+      <table class="amp-table" id="del-table">
+        <tr class="amp-tr">
+          <th class="amp-th">SKU</td>
+          <th class="amp-th">Customer</td>
+          <th class="amp-th">Description</td>
+          <th class="amp-th">Pallet Type</td>
+        </tr>
+        <tr class="amp-tr am-temp">
+          <td class="amp-td"></td>
+          <td class="amp-td"></td>
+          <td class="amp-td"></td>
+          <td class="amp-td"></td>
+        </tr>
+      </table>
+      
+      <div id="overlay-edit">
+        <div id="edit-popup">
+          <p class="input-ds">SKU:</p>
+          <p class="input-ds" id="edit-popup-code-input"></p>
+          <p class="input-ds">Customer:</p>
+          <input id="edit-popup-cust-input" class="input-field" type="text">
+          <p class="input-ds">Description:</p>
+          <input id="edit-popup-desc-input" class="input-field" type="text">
+          <p class="input-ds">Pallet Type:</p>
+          <input id="edit-popup-ptype-input" class="input-field" type="text">
+        </div>
+      </div>
+      
+      <div class="main-block-control-panel">
+        <p id="confirm-edit-product" class="main-block-control-panel-btn">Confirm</p>
+        <p id="cancel-edit-product" class="main-block-control-panel-btn">Cancel</p>
+        <p id="edit-product" class="main-block-control-panel-btn">Edit</p>
+        <p id="delete-product" class="main-block-control-panel-btn">Delete</p>
+       </div>
+      
+    </div>
+    
+    <div class="inner-main-block" id="users">
+      <h1>User Settings</h1>
+      <table>
+        <tr class="add-product-tr">
+          <td class="add-product-td"></td>
+          <td class="add-product-td"></td>
+        </tr>
+        <tr class="add-product-tr">
+          <td class="add-product-td"></td>
+          <td class="add-product-td"></td>
+        </tr>
+        <tr class="add-product-tr">
+          <td class="add-product-td"></td>
+          <td class="add-product-td"></td>
+        </tr>
+      </table>
+    </div>
+    
+    <div class="inner-main-block" id="reports">
+      <h1>Reports</h1>
+      <table>
+        <tr class="add-product-tr">
+          <td class="add-product-td"></td>
+          <td class="add-product-td"></td>
+        </tr>
+        <tr class="add-product-tr">
+          <td class="add-product-td"></td>
+          <td class="add-product-td"></td>
+        </tr>
+        <tr class="add-product-tr">
+          <td class="add-product-td"></td>
+          <td class="add-product-td"></td>
+        </tr>
+      </table>
+    </div>
+    
+    <div class="inner-main-block" id="locations">
+      <h1>Locations</h1>
+      
+    </div>
+    
+    <div class="inner-main-block" id="create-goodsin">
+      <h1>Create Goods In</h1>
+      <table id="gi-table">
+        <tr class="gi-tr">
+          <th class="gi-th">PO number</th>
+          <th class="gi-th">Customer</th>
+          <th class="gi-th">Reference</th>
+          <th class="gi-th">Status</th>
+          <th class="gi-th">Pallets</th>
+          <th class="gi-th">Date Created</th>
+          <th class="gi-th">Due Date</th>
+        </tr>
+        <tr class="gi-tr gi-temp">
+          <td class="gi-td">data</td>
+          <td class="gi-td">data</td>
+          <td class="gi-td">data</td>
+          <td class="gi-td">data</td>
+          <td class="gi-td">data</td>
+          <td class="gi-td">data</td>
+          <td class="gi-td">data</td>
+          
+        </tr>
+      </table>
+      <div id="gi-edit-overlay">
+        <div id="gi-edit-popup">
+          
+          
+          <table id="gi-popup-table">
+            <tr>
+              <td>
+                <h2 class="gi-popup-headlines">PO</h2>
+              </td>
+              <td>
+                <h2 class="gi-popup-headlines">Customer</h2>
+              </td>
+              <td>
+                <h2 class="gi-popup-headlines">Reference</h2>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h3 id="po-head">1234223212312</h3>
+              </td>
+              <td class="element-to-change">
+                <input id="cust-head" class="gi-popup-input" type="text" placeholder="Customer">
+              </td>
+              <td>
+                <input id="ref-head" class="gi-popup-input" type="text" placeholder="Reference">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h2 class="gi-popup-headlines">Status</h2>
+              </td>
+              <td>
+                <h2 class="gi-popup-headlines">Pallets</h2>
+              </td>
+              <td>
+                <h2 class="gi-popup-headlines">Date Created</h2>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h3 id="status-head">Created</h3>
+              </td>
+              <td>
+                <h3 id="pallets-head">0</h3>
+              </td>
+              <td>
+                <h3 id="datec-head">Today</h3>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h2 class="gi-popup-headlines">Due Date</h2>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h3 id="dated-head">Tomorrow</h3>
+              </td>
+            </tr>
+          </table>
+          <table id="gi-new-pallet-table">
+            <tr>
+              <td>SKU</td>
+              <td>Quantity</td>
+              <td>BBD</td>
+            </tr>
+            <tr>
+              <td><input id="add-new-sku" class="gi-new-pallet-input" type="text"></td>
+              <td><input id="add-new-qty" class="gi-new-pallet-input" type="text"></td>
+              <td><input id="add-new-bbd" class="gi-new-pallet-input" type="text"></td>
+              <td><h1 id="add-pallet-btn">+</h1></td>
+            </tr>
+          </table>
+          <div id ="gi-edit-overview">
+            <table id="gi-edit-pallet-table">
+              <tr class="gi-pallet-table-tr">
+                <th class="gi-pallet-table-th">Pallet ID</th>
+                <th class="gi-pallet-table-th">SKU/Product code</th>
+                <th class="gi-pallet-table-th">Quantity</th>
+                <th class="gi-pallet-table-th">BBD</th>
+                <th class="gi-pallet-table-th">Status</th>
+                <th class="gi-pallet-table-th">Location</th>
+              </tr>
+              <tr class="gi-pallet-table-tr">
+                <td class="gi-pallet-table-td"></td>
+                <td class="gi-pallet-table-td"></td>
+                <td class="gi-pallet-table-td"></td>
+                <td class="gi-pallet-table-td"></td>
+                <td class="gi-pallet-table-td"></td>
+                <td class="gi-pallet-table-td"></td>
+              </tr>
+            </table>
+            
+          </div>
+        </div>
+      </div>
+    <div class="main-block-control-panel">
+      <p id="gi-new-btn" class="main-block-control-panel-btn">New</p>
+      <p id="gi-edit-btn" class="main-block-control-panel-btn">Edit</p>
+      <p id="gi-delete-btn" class="main-block-control-panel-btn">Delete</p>
+      <p id="gi-close-btn" class="main-block-control-panel-btn">Close</p>
+    </div>
+    </div>
+
+
+  </div>
+
+
+
+</body>
+
+</html>

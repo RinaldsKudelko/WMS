@@ -1,0 +1,109 @@
+#main-block{
+  width:calc(100% - 100px);
+  height:calc(100vh - 100px);
+  background-color:#e3e3e3;
+  position:absolute;
+  top:100px;
+  left:100px;
+  
+}
+
+.inner-main-block{
+  padding:10px;
+  background-color:rgba(0,0,0,0);
+  width:95%;
+  height:calc(100% - 100px);
+  margin-top:40px;
+  margin-left:50%;
+  transform:translate(-50%);
+  position: absolute;
+  
+}
+
+.add-product-td{
+  padding:10px;
+  font-size:20px;
+  width:310px;
+  text-align:right;
+}
+.add-product-td>input{
+  border:1px solid #b0b0b0;
+  font-size:20px;
+  margin:2px;
+  padding:2px;
+  width:300px;
+}
+
+.amp-table, .amp-tr, .amp-td, .amp-th{
+  border: 1px solid #cfcfcf;
+  text-align:left;
+  border-collapse: collapse;
+}
+.amp-table{
+  width:100%;
+}
+.amp-th{
+  padding:10px;
+  font-size:18px;
+  
+  text-align:center;
+}
+.amp-td{
+  padding:10px;
+  font-size:20px;
+  text-align:center;
+  color:#424242;
+}
+.amp-td-sel{
+  padding:10px;
+  font-size:20px;
+  text-align:center;
+  color:#ffffff;
+  background-color:#342b46;
+}
+.main-block-control-panel{
+  background-color:#342b46;
+  width:60%;
+  height:100px;
+  position: fixed;
+  bottom:10px;
+  border-radius:20px;
+  left:50%;
+  transform: translate(-50%);
+  text-align:center;
+}
+.main-block-control-panel-btn{
+  color:white;
+  background-color:#473455;
+  border-radius:10px;
+  padding:15px;
+  font-size:22px;
+ 
+  text-align:center;
+  display:inline;
+  position: relative;
+  top:35px;
+  margin-left:20px;
+  margin-right:20px;
+  border:1px solid white;
+}
+.main-block-control-panel-btn:hover{
+  background-color:#30223a;
+  cursor:pointer;
+}
+#logger{
+  width:50%;
+  height:100px;
+  position: absolute;
+  background-color: rgba(0,0,0,0);
+  z-index:25;
+  bottom:150px;
+  left:50%;
+  transform: translate(-50%);
+  text-align:center;
+}
+#logger-text{
+  margin-top:20px;
+  font-size:25px;
+}
+

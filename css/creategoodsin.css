@@ -1,0 +1,80 @@
+#gi-table{
+  width:100%;
+  
+}
+
+#gi-table, .gi-tr, .gi-th, .gi-td{
+  border:1px solid #c2c2c2;
+  border-collapse:collapse;
+  padding:10px;
+}
+
+.gi-td-sel{
+  color:#ffffff;
+  background-color:#342b46;
+}
+#gi-edit-popup{
+  width:80%;
+  height:600px;
+  background-color:white;
+  position:absolute;
+  left:50%;
+  transform:translate(-50%);
+  top:30px;
+  border-radius:10px;
+}
+#gi-edit-overlay{
+  display:none;
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0px;
+  background-color:rgba(0,0,0,0.5);
+}
+#gi-edit-overview{
+  background-color:white;
+  border-radius:10px;
+  border:4px solid #342b46;
+  width:98%;
+  left:50%;
+  transform:translate(-50%);
+  height:240px;
+  position:absolute;
+  bottom:5px;
+  overflow-x:auto;
+}
+#gi-popup-table{
+  table-layout:fixed;
+  width:100%;
+  background-color:white;
+  text-align:left;
+  padding:20px;
+  margin-top:20px;
+}
+.gi-popup-input{
+  padding:5px;
+  font-size:20px;
+  border:2px solid #342b46;
+  border-radius:10px;
+}
+.gi-popup-headlines{
+  color:#8c8c8c;
+  margin-top:7px;
+}
+#gi-edit-pallet-table{
+  width:100%;
+  table-layout:fixed;
+  padding:5px;
+}
+#gi-new-pallet-table{
+  width:100%;
+  table-layout:fixed;
+  padding:5px;
+  
+}
+.gi-new-pallet-input{
+  font-size:15px;
+  padding:5px;
+  border:2px solid #342b46;
+  border-radius:10px;
+}
